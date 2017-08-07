@@ -1,18 +1,24 @@
 // user imports to structure your css
 @import "./menu.sass"
-
-a
-  cursor: pointer
-
-  &:hover
-    text-decoration: none
+@import "./gigmatePlayer.sass"
 
 html, body
   height: 100%
-  margin: 10px
+  min-height: 100%
   padding: 0
+  margin: 0
   font-family: Helvetica, Arial
   color: #333333
+  background: #666666
+  box-sizing: border-box
+
+#container
+  min-height: 100%
+  box-sizing: border-box
+  padding: 10px
+
+.appWrapper
+  min-height: 100%
 
 .clearfix:before
 .clearfix:after,

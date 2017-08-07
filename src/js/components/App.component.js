@@ -7,6 +7,17 @@ import {setUser} from './../actions/user.actions';
 
 import {Menu} from './Menu.component';
 
+const menuItems = [
+  {
+    text: 'About',
+    route: ROUTES.about
+  },
+  {
+    text: 'Another Route',
+    route: ROUTES.anotherRoute
+  }
+];
+
 export class App extends Component {
   componentWillMount() {
     // simulate some server latency ...
@@ -19,20 +30,9 @@ export class App extends Component {
   
   render() {
     return (
-      <div>
+      <div className="appWrapper">
         <div className="clearfix">
-          <Menu items={
-            [
-              {
-                text: 'About',
-                route: ROUTES.about
-              },
-              {
-                text: 'Another Route',
-                route: ROUTES.anotherRoute
-              }
-            ]
-          } />
+          <Menu items={menuItems} />
         </div>
         <div>
           {/* this would also work: {this.props.children || <Home/>} */}
